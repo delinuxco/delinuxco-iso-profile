@@ -1,9 +1,0 @@
-#!/usr/bin/env xdg-open
-
-[Desktop Entry]
-Name=Syncthing
-Exec=xdg-open http://localhost:8384/
-Comment=Syncthing
-Terminal=false
-Type=Application
-Icon=syncthing

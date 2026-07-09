@@ -1,2 +1,0 @@
-#!/bin/bash
-ls -x1 ~/.local/bin/acs
