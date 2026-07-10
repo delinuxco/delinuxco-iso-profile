@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=mate-terminal -- bash -c ~/.user_init.sh && exit
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
+Hidden=false
+Name[en_US]=UserConfig.desktop
+Comment[en_US]=No description
+X-GNOME-Autostart-Delay=5
