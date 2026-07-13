@@ -405,8 +405,8 @@ ttf-bitstream-vera
 ttf-meslo-nerd
 ttf-ubuntu-font-family
 vi
-vlc
-vlc-plugins-all
+#vlc
+#vlc-plugins-all
 vokoscreen
 vulkan-tools
 vulkan-gfxstream
