@@ -8,7 +8,6 @@ networkmanager-openvpn
 networkmanager-vpnc
 nss-mdns                           # optional for avahi
 ntp
-openresolv
 openssh                            # required by gnome-keyring
 >extra openvpn                     # required by networkmanager-openvpn
 
@@ -24,7 +23,7 @@ manjaro-pipewire
 
 ## Fonts
 
-#adwaita-icon-theme                # required by gtk3 & gtk4
+adwaita-icon-theme                # required by gtk3 & gtk4
 gnu-free-fonts                     # required by vivaldi
 noto-fonts-cjk
 >extra terminus-font
@@ -108,7 +107,6 @@ gvfs-goa
 gvfs-gphoto2
 gvfs-mtp
 gvfs-smb
-gvfs-nfs
 xdg-user-dirs-gtk
 yelp
 
@@ -116,7 +114,7 @@ yelp
 ## GNOME Extra
 
 >extra dconf-editor                # developer tools
-#gnome-terminal
+gnome-terminal
 
 
 ## Themes
@@ -151,18 +149,18 @@ flatpak
 #>extra gimp
 >extra gnome-screenshot
 >extra gparted
-#>extra gprename                    # required by nemo-bulk-rename
+>extra gprename                    # required by nemo-bulk-rename
 >extra gufw
 htop
 icon-naming-utils
 inxi
->extra libgsf                      # optional for nemo
-lightdm
+>extra libgsf 
+lightdm                     # optional for nemo
 lightdm-settings
 lightdm-slick-greeter              # required by lightdm-settings
 #lightdm-gtk-greeter-settings
-#lightdm-gtk-greeter              # required by lightdm-settings
->extra lollypop
+#lightdm-gtk-greeter 
+#>extra lollypop
 manjaro-application-utility        # optional for manjaro-hello
 manjaro-hello
 manjaro-settings-manager-notifier  # optional for manjaro-settings-manager
@@ -187,7 +185,7 @@ vi
 #>extra vivaldi-ffmpeg-codecs       # optional for vivaldi
 >extra webapp-manager
 xdg-utils
-#zensu                              # Why?
+zensu                              # Why?
 
 ## Optional dependencies for file-roller
 >extra 7zip
@@ -210,12 +208,12 @@ mesa-utils
 ## Settings packages
 
 manjaro-browser-settings
-manjaro-cinnamon-settings
+#manjaro-cinnamon-settings
 
 
 ## Xorg Input Drivers
 
-#>extra manjaro-input               #package currently conflicts with xlibre-input-elographics
+#>extra manjaro-input
 
 
 ## Xorg Server
@@ -254,7 +252,7 @@ xlibre-video-vesa
 xlibre-video-voodoo
 xlibre-video-ati
 xlibre-meta
-
+xlibre-keyring
 
 
 
@@ -302,6 +300,7 @@ filezilla
 fingwit
 flameshot
 font-manager
+fonts-opensymbol
 fuse2
 fuse3
 fuse-common
@@ -310,6 +309,7 @@ gimp-appimage
 gnome-calculator
 gnome-disk-utility
 gnome-firmware
+gnome-logs
 gnome-screenshot
 gparted
 gpaste

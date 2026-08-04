@@ -376,13 +376,13 @@
             "Cinelerra-GG.desktop",
             "com.obsproject.Studio.desktop",
             "org.kde.kdenlive.desktop",
+            "vokoscreenNG.desktop",
             "org.gnome.Evolution.desktop",
             "libreoffice-startcenter.desktop",
             "org.gimp.GIMP.Stable.desktop",
             "org.inkscape.Inkscape.desktop",
             "org.darktable.Darktable.desktop",
-            "manjaro-hello.desktop",
-            "vokoscreenNG.desktop"
+            "manjaro-hello.desktop"
         ]
     },
     "__md5__": "3df0dfb46c743f29a6405292b645807a"

@@ -1,7 +1,7 @@
 [desktop-monitor-0]
 nemo-icon-view-keep-aligned=true
 nemo-icon-view-auto-layout=true
-nemo-icon-view-layout-timestamp=1783961295
+nemo-icon-view-layout-timestamp=1785172583
 nemo-icon-view-zoom-level=3
 
 [MJRO1813.volume]
@@ -14,13 +14,13 @@ icon-scale=1
 nemo-icon-position=91,45
 monitor=0
 icon-scale=1
-nemo-icon-position-timestamp=1783961651
+nemo-icon-position-timestamp=1785191487
 
 [network]
 nemo-icon-position=91,145
 monitor=0
 icon-scale=1
-nemo-icon-position-timestamp=1783961651
+nemo-icon-position-timestamp=1785191487
 
 [Shared.volume]
 nemo-icon-position=91,245
@@ -50,4 +50,4 @@ nemo-icon-position-timestamp=1783361384
 nemo-icon-position=91,245
 monitor=0
 icon-scale=1
-nemo-icon-position-timestamp=1783961651
+nemo-icon-position-timestamp=1785191487

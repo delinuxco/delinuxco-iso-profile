@@ -27,7 +27,7 @@ check_sudo() {
 
 check_internet() {
     local host="8.8.8.8"
-    echo -n "Checking internet connectivity..."
+    echo -n "Checking internet connectivity...used to verify GPG Keys. Not required, but recommended atleast during the first boot after installation."
     
     # 1. Initial Check
     if ping -c 1 -W 2 "$host" >/dev/null 2>&1; then
@@ -125,8 +125,8 @@ echo "🔐 Importing DeLinuxCO keys..."
 KEY_FILE="delinuxco.asc"
 if curl -s -O https://delinuxco.nyc3.cdn.digitaloceanspaces.com/x86_64/delinuxco.asc; then
     sudo pacman-key --add "$KEY_FILE"
-    sudo pacman-key --finger 5264C881A5E37495
-    sudo pacman-key --lsign-key 5264C881A5E37495
+    sudo pacman-key --finger 9478dd4f27ea6a82
+    sudo pacman-key --lsign-key 9478dd4f27ea6a82
     rm -f "$KEY_FILE"
 else
     echo "⚠️  Could not download DeLinuxCo GPG key. Skipping..."
@@ -177,8 +177,11 @@ fi
 # --- Post-Setup Logic (Installed Systems Only) ---
 if [[ "$OSTYPE" == linux-gnu* ]]; then
     if is_installed; then
+        # remove virtualbox-guest-utils from installed system
+        #sudo pacman -Rns --noconfirm virtualbox-guest-utils
+
         echo ""
-        read -rp "If you will be running Virtual Machines (VM's), It is recommended to install Virt-Manager, but it can be a bit tricky to configure correctly but we can take care of all of the installation and configuration. Would you like to install Virt-Manager now? Requires restart. [Y/n]: " install_choice
+        read -rp "If you will be running Virtual Machines (VM's), It is recommended to install Virt-Manager, and it can be a bit tricky to configure correctly, but we can take care of all of the installation and configuration. Would you like to install Virt-Manager now? Requires restart. [y/n]: " install_choice
         
         case "$install_choice" in 
             [Yy]* )
@@ -196,6 +199,7 @@ if [[ "$OSTYPE" == linux-gnu* ]]; then
                 if [[ "$restart_option" =~ ^[Yy]$ ]]; then
                     echo "Cleaning up and rebooting..."
                     touch "$MARKER_FILE"
+                    rm -f "$HOME/.config/autostart/UserConfig.desktop"
                     rm -f "$HOME/.user_init.sh"
                     sync
                     sudo shutdown -r now
@@ -205,7 +209,7 @@ if [[ "$OSTYPE" == linux-gnu* ]]; then
                 fi
                 ;;
             * )
-                echo "Skipping Virt-Manager installation."
+                echo "Skipping Virt-Manager installation, if you wish to install later, open a terminal window and run: install-virt-manager"
                 ;;
         esac
     fi
@@ -214,8 +218,8 @@ fi
 # --- Final Cleanup ---
 echo "------------------------------------------"
 echo "Cleaning up startup files..."
-rm -f "$HOME/.user_init.sh"
 rm -f "$HOME/.config/autostart/UserConfig.desktop"
+rm -f "$HOME/.user_init.sh"
 touch "$MARKER_FILE"
 echo "Cleanup complete."
 
@@ -225,9 +229,15 @@ if is_installed; then
     if [[ "$final_reboot_choice" =~ ^[Yy]$ ]]; then
         echo "Rebooting system..."
         sync
+        rm -f "$HOME/.config/autostart/UserConfig.desktop"
+        rm -f "$HOME/.user_init.sh"
+        touch "$MARKER_FILE"
         sudo shutdown -r now
     else
         echo "Closing terminal..."
+        rm -f "$HOME/.config/autostart/UserConfig.desktop"
+        rm -f "$HOME/.user_init.sh"
+        touch "$MARKER_FILE"        
         pkill mate-terminal
         exit 0
     fi

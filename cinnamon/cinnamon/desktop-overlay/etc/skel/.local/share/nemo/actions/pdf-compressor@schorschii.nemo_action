@@ -1,0 +1,49 @@
+[Nemo Action]
+
+Name=Compress PDF(s)
+Name[ca]=Comprimeix PDF(s)
+Name[cs]=Komprimovat soubory PDF
+Name[da]=Komprimér PDF'er
+Name[de]=PDF(s) komprimieren
+Name[el]=Συμπίεση PDF
+Name[es]=Comprimir PDF(s)
+Name[fi]=Tiivistä pdf
+Name[fr]=Compresser le(s) PDF(s)
+Name[hr]=Sažmi PDF
+Name[hu]=PDF(ek) tömörítése
+Name[it]=Comprimi PDF
+Name[ja]=PDF を圧縮
+Name[nl]=Comprimeer PDF-bestand(en)
+Name[pt]=Comprimir PDF(s)
+Name[pt_BR]=Compactar PDF(s)
+Name[tr]=PDF(leri) sıkıştır
+Name[uk]=Стиснення PDF
+Name[vi]=Nén PDF
+Name[zh_CN]=压缩PDF文件
+Comment=Compresses the selected PDF files and saves it with suffix '.compressed' (e.g. to send it via email)
+Comment[ca]=Comprimeix els fitxers PDF seleccionats i els guarda amb el sufix '.compressed' (per exemple, per enviar-los per correu)
+Comment[cs]=Zkomprimuje vybrané soubory PDF a uloží je s příponou '.compressed' (např. pro odeslání e-mailem)
+Comment[da]=Komprimerer de valgte PDF-filer og gemmer dem med suffikset “.compressed” (f.eks. til afsendelse via e-mail)
+Comment[el]=Συμπιέζει τα επιλεγμένα αρχεία PDF και τα αποθηκεύει με την κατάληξη '.compressed' (π.χ. για να τα στείλετε μέσω email)
+Comment[es]=Comprima los archivos PDF seleccionados y los guarda con el sufijo '.compressed' (por ejemplo, para enviarlos por correo electrónico)
+Comment[fi]=Pakkaa pdf-tiedostot tiiviimpään kokoon ja tallentaa ne päätteellä ".compressed" (jopa kolmasosa alkuperäisestä)
+Comment[fr]=Compresser les fichiers PDF sélectionnés et les sauvegarder avec le suffix ".compressed" (ex. pour les envoyer par mail)
+Comment[hr]=Sažima odabrane PDF datoteke i spremi ih s dodatkom '.compressed' (npr. za slanje putem e-pošte)
+Comment[hu]=Tömöríti a kiválasztott PDF fájlokat és elmenti ".compressed" utótaggal (például e-mailben történő elküldéshez)
+Comment[it]=Comprime i file PDF selezionati e li salva con il suffisso '.compressed' (ad esempio per inviarlo via email)
+Comment[ja]=選択した PDF ファイルを圧縮し、ファイル名に '.compressed' を付け加えて保存します (電子メールなどで送信しやすくなります)
+Comment[nl]=Comprimeert de geselecteerde PDF-bestanden en slaat ze op met de toevoeging '.compressed' (bv. voor verzending via e-mail)
+Comment[pt]=Comprime os ficheiros PDF selecionados e guarda-os com o sufixo '.compressed' (por exemplo, para os enviar por correio eletrónico)
+Comment[pt_BR]=Compacta os arquivos PDF selecionados e os salva com o sufixo '.compressed' (por exemplo, para enviar por e-mail).
+Comment[tr]=Seçili PDF dosyalarını sıkıştırır ve '.sıkıştırılmış' ekiyle kaydeder (örneğin e-posta ile göndermek için)
+Comment[uk]=Стискає вибрані PDF файли та зберігає їх із суфіксом '.compressed' (наприклад, для відправлення їх електронною поштою)
+Comment[vi]=Nén các tập tin PDF được chọn và lưu với hậu tố '.compressed' (ví dụ: để gửi qua email)
+Comment[zh_CN]=压缩选定的PDF文件，并用后缀“.compressed”保存（例如，通过电子邮件发送）
+Icon-Name=add-files-to-archive
+
+Exec=<pdf-compressor@schorschii/compress-pdf.sh %F>
+
+Mimetypes=application/pdf;
+Selection=notnone
+
+Dependencies=gs

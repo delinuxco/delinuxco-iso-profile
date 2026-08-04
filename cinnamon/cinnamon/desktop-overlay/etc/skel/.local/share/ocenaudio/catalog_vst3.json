@@ -1,0 +1,21 @@
+{
+    "bundles": [
+        {
+            "classes": [
+            ],
+            "compat": [
+            ],
+            "enabled": true,
+            "failed": true,
+            "lastError": "module failed to load",
+            "moduleinfoFound": false,
+            "mtime": 1783289751,
+            "path": "/usr/lib/vst3/rnnoise.vst3",
+            "probed": false,
+            "size": 4096
+        }
+    ],
+    "disabledVendors": [
+    ],
+    "version": 1
+}
