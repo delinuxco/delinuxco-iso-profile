@@ -61,13 +61,25 @@ vulkan-intel
 >multilib lib32-vulkan-intel
 vulkan-nouveau
 >multilib lib32-vulkan-nouveau
-xf86-input-vmmouse
-xf86-video-amdgpu
-xf86-video-ati
-xf86-video-dummy
-xf86-video-fbdev
-xf86-video-intel
-xf86-video-nouveau
-xf86-video-sisusb
-xf86-video-vesa
-xf86-video-voodoo
+xlibre-input-vmmouse
+xlibre-video-amdgpu
+xlibre-video-ati
+xlibre-video-dummy
+xlibre-video-fbdev
+xlibre-video-intel
+xlibre-video-nouveau
+xlibre-video-sisusb
+xlibre-video-vesa
+xlibre-video-voodoo
+
+
+#xf86-input-vmmouse
+#xf86-video-amdgpu
+#xf86-video-ati
+#xf86-video-dummy
+#xf86-video-fbdev
+#xf86-video-intel
+#xf86-video-nouveau
+#xf86-video-sisusb
+#xf86-video-vesa
+#xf86-video-voodoo

@@ -83,7 +83,7 @@
 <item oor:path="/org.openoffice.Office.Impress/MultiPaneGUI/SlideSorterBar/Visible"><prop oor:name="NotesView" oor:op="fuse"><value>true</value></prop></item>
 <item oor:path="/org.openoffice.Office.Impress/MultiPaneGUI/SlideSorterBar/Visible"><prop oor:name="OutlineView" oor:op="fuse"><value>true</value></prop></item>
 <item oor:path="/org.openoffice.Office.Impress/MultiPaneGUI/SlideSorterBar/Visible"><prop oor:name="SlideSorterView" oor:op="fuse"><value>false</value></prop></item>
-<item oor:path="/org.openoffice.Office.Jobs/Jobs/org.openoffice.Office.Jobs:Job['UpdateCheck']/Arguments"><prop oor:name="LastCheck" oor:op="fuse" oor:type="xs:long"><value>1785033034</value></prop></item>
+<item oor:path="/org.openoffice.Office.Jobs/Jobs/org.openoffice.Office.Jobs:Job['UpdateCheck']/Arguments"><prop oor:name="LastCheck" oor:op="fuse" oor:type="xs:long"><value>1786131717</value></prop></item>
 <item oor:path="/org.openoffice.Office.Linguistic/ServiceManager/GrammarCheckerList"><prop oor:name="en-AU" oor:op="fuse" oor:type="oor:string-list"><value><it>org.libreoffice.comp.pyuno.Lightproof.en</it></value></prop></item>
 <item oor:path="/org.openoffice.Office.Linguistic/ServiceManager/GrammarCheckerList"><prop oor:name="en-BS" oor:op="fuse" oor:type="oor:string-list"><value><it>org.libreoffice.comp.pyuno.Lightproof.en</it></value></prop></item>
 <item oor:path="/org.openoffice.Office.Linguistic/ServiceManager/GrammarCheckerList"><prop oor:name="en-BZ" oor:op="fuse" oor:type="oor:string-list"><value><it>org.libreoffice.comp.pyuno.Lightproof.en</it></value></prop></item>
@@ -1010,7 +1010,7 @@
 <item oor:path="/org.openoffice.Setup/Office/Factories/org.openoffice.Setup:Factory['com.sun.star.sheet.SpreadsheetDocument']"><prop oor:name="ooSetupFactoryWindowAttributes" oor:op="fuse"><value>57,51,1808,983;5;0,51,1921,1030;</value></prop></item>
 <item oor:path="/org.openoffice.Setup/Office/Factories/org.openoffice.Setup:Factory['com.sun.star.text.GlobalDocument']"><prop oor:name="ooSetupFactoryWindowAttributes" oor:op="fuse"><value>0,51,1921,1030;5;0,51,1921,1030;</value></prop></item>
 <item oor:path="/org.openoffice.Setup/Office/Factories/org.openoffice.Setup:Factory['com.sun.star.text.TextDocument']"><prop oor:name="ooSetupFactoryWindowAttributes" oor:op="fuse"><value>-2,49,1921,1030;5;0,51,1921,1030;</value></prop></item>
-<item oor:path="/org.openoffice.Setup/Office"><prop oor:name="LastCompatibilityCheckID" oor:op="fuse"><value>0229ac93fcf0d7cbc6376066c6f35021cef002dc</value></prop></item>
+<item oor:path="/org.openoffice.Setup/Office"><prop oor:name="LastCompatibilityCheckID" oor:op="fuse"><value>997786b8bfe5fadf793c1218fed3f515ec806f1b</value></prop></item>
 <item oor:path="/org.openoffice.Setup/Office"><prop oor:name="OfficeRestartInProgress" oor:op="fuse"><value>false</value></prop></item>
 <item oor:path="/org.openoffice.Setup/Office"><prop oor:name="ooSetupInstCompleted" oor:op="fuse"><value>true</value></prop></item>
 <item oor:path="/org.openoffice.Setup/Product"><prop oor:name="LastTimeDonateShown" oor:op="fuse"><value>1770825950</value></prop></item>

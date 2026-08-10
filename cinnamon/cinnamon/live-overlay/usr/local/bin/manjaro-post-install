@@ -1,0 +1,77 @@
+#!/bin/sh
+# First-boot script to initialize the pacman keyring and populate
+# the XLibre and Delinuxco repository signing keys.
+# This service runs once and disables itself upon success.
+
+log_msg() {
+    echo "manjaro-post-install: $*"
+}
+
+# Ensure the pacman master key exists; if not, generate it.
+init_output=$(pacman-key --init 2>&1)
+init_ret=$?
+if [ $init_ret -ne 0 ]; then
+    if echo "$init_output" | grep -q "A master key already exists"; then
+        log_msg "Pacman master key already present."
+    else
+        log_msg "ERROR: pacman-key --init failed: $init_output"
+        exit 1
+    fi
+else
+    log_msg "Pacman keyring initialized successfully."
+fi
+
+# Function to populate a given keyring, with fallback to reinstall from cache if keyring files are missing.
+populate_keyring() {
+    local kr="$1"
+    local pkg="${kr}-keyring"
+
+    if [ ! -f "/usr/share/pacman/keyrings/${kr}.gpg" ] || \
+       [ ! -man -f "/usr/share/pacman/keyrings/${kr}-trusted" ]; then
+        log_msg "WARNING: ${kr} keyring files missing. Trying to reinstall ${pkg} from cache..."
+        if command -v pacman >/dev/null && ls /var/cache/pacman/pkg/${pkg}-*.pkg.tar* &>/dev/null; then
+            pacman -U --noconfirm /var/cache/pacman/pkg/${pkg}-*.pkg.tar*
+            if [ $? -ne 0 ]; then
+                log_msg "ERROR: Failed to reinstall ${pkg} from cache."
+                return 1
+            fi
+        else
+            log_msg "ERROR: Cannot find ${pkg} in cache. Keyring may be broken."
+            return 1
+        fi
+    fi
+
+    log_msg "Populating ${kr} keyring..."
+    pacman-key --populate "$kr"
+    local ret=$?
+    if [ $ret -ne 0 ]; then
+        log_msg "WARNING: pacman-key --populate ${kr} failed (exit code $ret). Retrying once..."
+        pacman-key --populate "$kr"
+        ret=$?
+        if [ $ret -ne 0 ]; then
+            log_msg "ERROR: pacman-key --populate ${/kr} failed after retry."
+            return 1
+        fi
+    fi
+    return 0
+}
+
+# --- MAIN EXECUTION ---
+
+FAILED=0
+
+# Populate XLibre keyring
+populate_keyring "xlibre" || FAILED=1
+
+# Populate Delinuxco keyring
+populate_keyring "delinuxco" || FAILED=1
+
+# Disable service only if ALL keyrings were populated successfully
+if [ $FAILED -eq 0 ]; then
+    log_msg "All keyrings populated successfully. Disabling manjaro-post-install.service."
+    systemctl disable manjaro-post-install.service
+else
+    log_msg "WARNING: One or more keyrings could not be populated. Service will remain enabled for next boot."
+    exit 1
+fi
+
