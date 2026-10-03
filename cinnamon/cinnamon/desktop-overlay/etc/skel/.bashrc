@@ -412,6 +412,9 @@ unset bash_prompt
 
 #export PATH="~/.local/bin/acs:$PATH"
 
+# Replace 'id_rsa' with the name of your private key file if it's different
+#eval $(keychain --eval --agents ssh id_rsa)
+
 
 ### EOF ###
 

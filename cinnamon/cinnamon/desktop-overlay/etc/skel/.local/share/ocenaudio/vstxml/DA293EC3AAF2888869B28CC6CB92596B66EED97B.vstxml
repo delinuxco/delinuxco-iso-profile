@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OCENVST>
+	<Filename>/usr/lib/lxvst/librnnoise_stereo.so</Filename>
+	<TimeStamp>1781065468000</TimeStamp>
+	<Category>effect</Category>
+	<UniqueID>1382968881</UniqueID>
+
+	<VSTPluginDescription>
+		<VendorString>werman</VendorString>
+		<ProductString>RNNoise suppression for voice</ProductString>
+		<EffectName>RNNoise suppression for voice</EffectName>
+		<Flags>561</Flags>
+		<Version>90880</Version>
+		<UniqueID>1382968881</UniqueID>
+		<NumInputs>2</NumInputs>
+		<NumOutputs>2</NumOutputs>
+		<NumParams>4</NumParams>
+	</VSTPluginDescription>
+
+	<VSTPrograms>
+		<DefaultProgram>
+			<Param id="0" value="0.85" />
+			<Param id="1" value="0.04" />
+			<Param id="2" value="0" />
+			<Param id="3" value="1" />
+		</DefaultProgram>
+		<Program name="RNNoise suppression for voice" id="0">
+			<Param id="0" value="0.85" />
+			<Param id="1" value="0.04" />
+			<Param id="2" value="0" />
+			<Param id="3" value="1" />
+		</Program>
+	</VSTPrograms>
+
+	<VSTPluginProperties>
+		<VSTParametersStructure>
+
+			<Param name="VAD Threshold" shortName="VAD Threshold" id="0" />
+			<Param name="VAD Grace Period (10ms per unit)" shortName="VAD Grace Period (10ms per unit)" id="1" />
+			<Param name="Retroactive VAD Grace Period (10" shortName="Retroactive VAD Grace Period (10" id="2" />
+			<Param name="Mix" shortName="Mix" id="3" />
+
+		</VSTParametersStructure>
+	</VSTPluginProperties>
+
+	<OCENVSTPluginProperties>
+		<OCENVSTParametersStructure>
+			<Param id="0" kind="linear" minDisplayValue="0" maxDisplayValue="1" />
+			<Param id="1" kind="linear" minDisplayValue="0" maxDisplayValue="500" />
+			<Param id="2" kind="linear" minDisplayValue="0" maxDisplayValue="10" />
+			<Param id="3" kind="linear" minDisplayValue="0" maxDisplayValue="1" />
+		</OCENVSTParametersStructure>
+	</OCENVSTPluginProperties>
+
+</OCENVST>

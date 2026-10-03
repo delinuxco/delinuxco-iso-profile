@@ -183,7 +183,7 @@ check_sudo
 check_internet
 
 echo -e "\nDeLinuxCO Automated Setup Script"
-echo -e "This script requires internet access for GPG verification.\n"
+echo -e "This script requires internet access for GPG verification, you can bypass this, but you may get an error when trying to install software. On a live ISO, the system will keep trying to verify the keys from cache. On installed systems, it will attempt to verify and or install the pgp keys in the back ground if bypassed.\n"
 
 if is_installed; then
     echo "✅ System appears to be an installed Arch-based Linux"
@@ -250,7 +250,7 @@ fi
 # --- Post-Setup Logic (Installed Systems Only) ---
 if is_installed; then
     echo ""
-    read -rp "Would you like to install Virt-Manager now? (Requires restart) [y/n]: " install_choice
+    read -rp "Would you like to install Virt-Manager now (to run virtual machines)? (Requires restart) [y/n]: " install_choice
     case "$install_choice" in 
         [Yy]* )
             if command -v install-virt-manager >/dev/null; then

@@ -1,0 +1,82 @@
+{
+    "paths": [
+        {
+            "disabled": false,
+            "expanded": true,
+            "kind": "system",
+            "path": "/home/delinuxco/.vst",
+            "plugins": [
+            ],
+            "searched": true
+        },
+        {
+            "disabled": false,
+            "expanded": true,
+            "kind": "system",
+            "path": "/usr/lib/vst",
+            "plugins": [
+            ],
+            "searched": true
+        },
+        {
+            "disabled": false,
+            "expanded": true,
+            "kind": "system",
+            "path": "/usr/local/lib/vst",
+            "plugins": [
+            ],
+            "searched": true
+        },
+        {
+            "disabled": false,
+            "expanded": true,
+            "kind": "system",
+            "path": "/home/delinuxco/.lxvst",
+            "plugins": [
+            ],
+            "searched": true
+        },
+        {
+            "disabled": false,
+            "expanded": true,
+            "kind": "system",
+            "path": "/usr/lib/lxvst",
+            "plugins": [
+                {
+                    "arch": "arch64bits",
+                    "enabled": true,
+                    "filename": "/usr/lib/lxvst/librnnoise_stereo.so",
+                    "hash": "C5C37C0F887092A0112493BC7096B30D41FA7B24",
+                    "name": "RNNoise suppression for voice",
+                    "unique_id": 1382968881,
+                    "vendor": "werman"
+                },
+                {
+                    "arch": "arch64bits",
+                    "failed": true,
+                    "filename": "/usr/lib/lxvst/librnnoise_mono.so",
+                    "hash": "93028F34C8D75FD2F83878058FAD4C3268DD0F6C"
+                }
+            ],
+            "searched": true
+        },
+        {
+            "disabled": false,
+            "expanded": true,
+            "kind": "system",
+            "path": "/usr/local/lib/lxvst",
+            "plugins": [
+            ],
+            "searched": true
+        },
+        {
+            "disabled": false,
+            "expanded": true,
+            "kind": "system",
+            "path": "/home/delinuxco/.local/share/ocenaudio/OcenAudio/plugins/vst",
+            "plugins": [
+            ],
+            "searched": true
+        }
+    ]
+}

@@ -98,7 +98,7 @@ xed
 
 ## GNOME group
 
-#>extra baobab
+>extra baobab
 >extra gnome-disk-utility
 gnome-keyring
 >extra gnome-system-monitor
@@ -154,20 +154,17 @@ flatpak
 htop
 icon-naming-utils
 inxi
->extra libgsf 
-lightdm                     # optional for nemo
+>extra libgsf                      # optional for nemo
+lightdm
 lightdm-settings
 lightdm-slick-greeter              # required by lightdm-settings
-#lightdm-gtk-greeter-settings
-#lightdm-gtk-greeter 
-#>extra lollypop
 manjaro-application-utility        # optional for manjaro-hello
 manjaro-hello
 manjaro-settings-manager-notifier  # optional for manjaro-settings-manager
 mintstick
 >extra mousetweaks                 # optional for onboard
 #>extra mugshot                    # obsolete
->multilib lib32-mesa-utils         # Why?
+#>multilib lib32-mesa-utils         # Why?
 >extra onboard
 #>extra clipit
 pavucontrol
@@ -213,7 +210,7 @@ manjaro-browser-settings
 
 ## Xorg Input Drivers
 
-#>extra manjaro-input
+>extra manjaro-input
 
 
 ## Xorg Server
@@ -255,8 +252,6 @@ xlibre-meta
 xlibre-keyring
 
 
-
-
 ##DeLinuxCo
 >extra gucharmap
 >extra jre8-openjdk
@@ -265,7 +260,7 @@ xlibre-keyring
 >extra yay
 aspell
 aspell-en
-audacity
+audacity-appimage
 awesome-terminal-fonts
 ayatana-ido
 libayatana-indicator
@@ -277,7 +272,7 @@ bolt
 breeze
 breeze-icons
 calf
-chromium
+ungoogled-chromium-appimage
 chromium-widevine
 cin-appimage
 colord-sane
@@ -314,6 +309,7 @@ gnome-screenshot
 gparted
 gpaste
 gprename
+gpu-screen-recorder-appimage
 grsync
 gvfs-dnssd
 gscan2pdf
@@ -327,13 +323,15 @@ inkscape-appimage
 ipp-usb
 inter-font
 iso-flag-png
+intel-media-driver
 joplin-appimage
 kdenlive-appimage
 kdialog
+keychain
 kvantum
-keepassxc
-lib32-flex
-lib32-mesa-demos
+keepassxc-appimage
+#lib32-flex
+#lib32-mesa-demos
 libxcrypt-compat
 libgsf
 libinsane
@@ -341,6 +339,10 @@ libnautilus-extension
 libnotify
 libreoffice-fresh-full-appimage
 libsecret
+libva-utils
+libva-intel-driver
+libvdpau-va-gl
+libxvmc
 live-media
 localsend-appimage
 lsd
@@ -353,7 +355,7 @@ mediainfo
 mediainfo-gui
 libmediainfo
 mint-l-icons
-mission-center
+mission-center-appimage
 noise-suppression-for-voice
 noto-fonts-cjk
 obs-studio-appimage
@@ -389,6 +391,8 @@ realtime-privileges
 rhythmbox
 rust
 rustdesk-client-appimage
+samba
+manjaro-settings-samba
 sane-airscan
 sane-gt68xx-firmware
 shotwell
@@ -401,6 +405,7 @@ syncthing
 tesseract-data-eng
 thunderbird
 timeshift
+tmog-appimage
 ttf-bitstream-vera
 ttf-meslo-nerd
 ttf-ubuntu-font-family
@@ -415,4 +420,5 @@ winegui
 xdg-desktop-portal-gtk
 yq
 zen-browser-appimage
+
 
